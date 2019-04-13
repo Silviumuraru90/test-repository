@@ -18,12 +18,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'jose'
 api = Api(app)
 
-# before the first request runs, it's going to create the database:
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
-
 jwt = JWT(app, authenticate, identity)     # creates /auth endpoint
 
 api.add_resource(Store, '/store/<string:name>')
@@ -39,10 +33,8 @@ api.add_resource(UserRegister, '/register')
 
 # THIS PREVENTS the above from happening:
 if __name__ == '__main__':
-
     from db import db
     db.init_app(app)
-
     app.run(port=5000, debug=True)
 
 # Explanation is that the file that's run is assigned __main__ as a __name__
