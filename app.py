@@ -1,3 +1,5 @@
+import os                   # to have access to the environment variables
+
 from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
@@ -10,7 +12,10 @@ from resources.store import Store, StoreList
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
+# Important to leave 'sqlite:///data.db' as well - to leave this path for local testing
+# locally will use the second value if the seond one is not to be found.
+
 
 # the following turns of the flask_sqlalchemy modification tracker
 # it does not turn of the SQLAlchemy modification tracker
