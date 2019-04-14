@@ -1,5 +1,6 @@
 # Https://flaskapp-store.herokuapp.com
 
+:warning: :construction: This is Beta for the project's purpose: Authorization on frontend pages and handling permissions along with script-driven API calls from the end-user's interface. :construction: :warning:
 
 ## Installation
 
