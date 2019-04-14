@@ -3,8 +3,13 @@
 ## Installation
 
 ```
-pip install Flask
-python app.py
+Flask-based app. Libraries used:
+=> Flask
+=> Flask-RESTful
+=> Flask-JWT
+=> Flask-SQLAlchemy
+=> uwsgi
+=> psycopg2
 ```
 
 
