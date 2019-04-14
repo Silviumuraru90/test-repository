@@ -17,7 +17,7 @@ Flask-based app. Libraries used:
 ## Description
 
 - Rendering a store only via API.
-- Displaying 404 on root.
+- Displaying 404 on root, as expected.
 
 
 ## Implementation
