@@ -1,4 +1,5 @@
-# My awesome REST API
+# Https://flaskapp-store.herokuapp.com
+
 
 ## Installation
 
@@ -15,9 +16,12 @@ Flask-based app. Libraries used:
 
 ## Description
 
+- Rendering a store only via API.
+- Displaying 404 on root.
 
 
 ## Implementation
 
-This project is implemented using Flask and is a REST API for a store.
+- This project is implemented using Flask and is a REST API for a store.
+- Hosted on Heroku
 
